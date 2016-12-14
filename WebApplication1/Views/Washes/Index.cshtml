@@ -1,0 +1,34 @@
+﻿@model IEnumerable<WebApplication1.Models.Entities.Wash>
+
+@{
+    ViewBag.Title = "Car Wash";
+}
+
+<h2>Wash list</h2>
+
+
+<div class="card-panel blue-grey lighten-5">
+
+<table class="table">  
+   
+
+@foreach (var item in Model) {
+    
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Number)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Adress)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Description)
+        </td>
+       
+    </tr>
+}
+</table>
+    </div>
